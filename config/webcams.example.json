@@ -11,8 +11,8 @@
     "publish_interval_seconds": 0.2
   },
   "cameras": [
-    {"camera_index": 0, "rtsp_url": "device:0@1280x720", "camera_position": [0, 0, 0], "yaw": 0, "pitch": 0, "roll": 90, "fov_degrees": 70},
-    {"camera_index": 1, "rtsp_url": "device:1@1280x720", "camera_position": [0, 0, 0], "yaw": 0, "pitch": 0, "roll": 90, "fov_degrees": 70},
-    {"camera_index": 2, "rtsp_url": "device:2@1280x720", "camera_position": [0, 0, 0], "yaw": 0, "pitch": 0, "roll": 90, "fov_degrees": 70}
+    {"camera_index": 0, "rtsp_url": "PASTE_CAMERA_0_FROM_LIST_CAMERAS", "camera_position": [0, 0, 0], "yaw": 0, "pitch": 0, "roll": 90, "fov_degrees": 70},
+    {"camera_index": 1, "rtsp_url": "PASTE_CAMERA_1_FROM_LIST_CAMERAS", "camera_position": [0, 0, 0], "yaw": 0, "pitch": 0, "roll": 90, "fov_degrees": 70},
+    {"camera_index": 2, "rtsp_url": "PASTE_CAMERA_2_FROM_LIST_CAMERAS", "camera_position": [0, 0, 0], "yaw": 0, "pitch": 0, "roll": 90, "fov_degrees": 70}
   ]
 }

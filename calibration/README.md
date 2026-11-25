@@ -25,7 +25,7 @@ against the ground truth, so you can see what good output looks like. The output
 
 Edit `calibration/settings.sh`:
 - `CONFIG`: your camera config
-- `CAMERAS`: which camera indices to calibrate
+- `CAMERAS`: the `camera_index` values to calibrate, e.g. `0 1` for two cameras
 - `PAPER`: the paper size
 
 ```bash
@@ -86,7 +86,7 @@ straight edges should look straight on the right.
 
 **Undistortion costs resolution (matters for tiny objects).** Frames are undistorted into an image of the
 same size, so a wide lens has to shrink its centre to fit its edges in. `--balance` chooses the
-trade-off. Measured on synthetic 1280×720 lenses like yours:
+trade-off. Measured on synthetic 1280×720 lenses:
 
 | `--balance` | standard (~108° measured) | fisheye (~127° measured) |
 |---|---|---|
@@ -95,8 +95,7 @@ trade-off. Measured on synthetic 1280×720 lenses like yours:
 | 1 (keep everything) | 56%, 119° | 57%, 127° |
 
 If your objects are only 1–3 pixels across, prefer `--balance 0` and accept losing the outer edge of the
-view. A planned pipeline change (casting rays straight from the raw pixels) would
-remove this trade-off.
+view.
 
 ## 4. Placement: board on the floor
 

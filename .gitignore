@@ -16,5 +16,3 @@ calibration/landmarks.csv
 .DS_Store
 config/*.bak*
 calibration/settings.local.sh
-# local, setup-specific demo (not part of the repo)
-tools/cradle_demo/

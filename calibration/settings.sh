@@ -4,7 +4,7 @@
 if [ -f calibration/settings.local.sh ]; then source calibration/settings.local.sh; fi
 
 CONFIG="${CONFIG:-config/my_cameras.json}"   # your camera config (copy one of the examples)
-CAMERAS="${CAMERAS:-0 1 2}"       # the camera_index values in that config
+CAMERAS="${CAMERAS:-0 1 2}"       # the camera_index values in that config ("0 1" for two cameras)
 PAPER="${PAPER:-A3}"              # A4 A3 A2 A1 A0 letter tabloid -- bigger is better for placement
 SQUARES="7 5"                     # board squares (x y)
 SQUARE_MM="${SQUARE_MM:-}"        # MEASURED square size if it differs from the print (e.g. printed scaled)

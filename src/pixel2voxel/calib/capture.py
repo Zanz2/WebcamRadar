@@ -22,7 +22,7 @@ from .board import BoardDetector
 
 STABLE_PX = 1.0  # mean corner motion (pixels, at detection scale) that still counts as "still"
 TILT_WEIGHT = 0.4  # ~12 deg of board tilt counts as much as moving 8% across the image
-MAX_TILT = 50.0  # steeper views have foreshortened, partly defocused corners (seen on a real webcam)
+MAX_TILT = 50.0  # steeper views have foreshortened, partly defocused corners
 WARMUP_S = 1.0  # live streams: skip frames before the first keyframe / while auto-exposure settles
 
 

@@ -110,7 +110,7 @@ Viewer controls: drag to orbit, scroll to zoom, `+`/`-` to lower or raise the br
 
 ### Small or far targets
 
-By default every camera's rays are summed, so one camera's streak can outshine the real target. In our test
+By default every camera's rays are summed, so one camera's streak can outshine the real target. In one test
 (three webcams, 1.5 cm balls about 3 m away) these settings found the small swing when the plain defaults didn't:
 
 | Setting | Value | Why |

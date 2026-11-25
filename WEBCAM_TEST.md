@@ -26,15 +26,18 @@ uv run p2v-calibrate list-cameras --size 1280x720
 cp config/webcams.example.json config/my_cameras.json
 ```
 On macOS it prints an `rtsp_url` value for each camera (`camera:NAME@WxH`); elsewhere it prints `device:N`. It also
-saves a labelled preview, `calibration/work/devices/all_cameras.png`. Put one value into each camera entry of
-`config/my_cameras.json` (write `device:N` as `device:N@WxH`). Leave the positions and angles; calibration fills them in.
+saves a labelled preview, `calibration/work/devices/all_cameras.png`. Replace each `PASTE_CAMERA_...` in
+`config/my_cameras.json` with one value (write `device:N` as `device:N@WxH`). Leave the positions and angles; calibration fills them in.
+
+- **Only two cameras?** Delete the third entry, and the comma before it, and set `CAMERAS` to `0 1` in step 3. More than
+  three: copy an entry and give it a new `camera_index`.
 
 - **A camera that "delivered no frames"** is usually a phone (Continuity Camera), a virtual camera, or in use elsewhere.
 - **Pin the size each camera actually delivers.** It must stay the same between calibration and running.
 - **`device:N` numbers can change** when cameras are re-plugged; names don't.
 
 ## 3. Calibrate (about 20 minutes)
-In `calibration/settings.sh`, check `CONFIG`, `CAMERAS` and `PAPER`. If the printed squares aren't the size printed on
+In `calibration/settings.sh`, check `CONFIG`, `CAMERAS` (the `camera_index` values in your config) and `PAPER`. If the printed squares aren't the size printed on
 the page, set `SQUARE_MM` to what you measured.
 
 Then follow [calibration/README.md](calibration/README.md):
@@ -78,6 +81,8 @@ Swing the object through the space above the board. A blob should follow it in t
 to adjust the threshold until single-camera streaks disappear and the blob remains.
 
 ## Tuning
+For a small, slow or distant object, turn on camera agreement: see [small or far targets](USAGE.md#small-or-far-targets).
+
 | Problem | Try |
 |---|---|
 | A window is all red while nothing moves | Auto-exposure or light flicker: raise `motion_threshold` (25 → 40), steadier light, avoid LED flicker |

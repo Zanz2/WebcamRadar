@@ -56,7 +56,8 @@ brightest voxel landed on the cradle's ball area in all three cameras:
 
 - The agreement rows also use a higher motion threshold (40 instead of 25) and a faster fade, so agreement isn't the
   only difference.
-- Those settings were chosen on these same recordings. This is a demonstration, not an independent benchmark.
+- The settings are listed in [small or far targets](USAGE.md#small-or-far-targets); the example config starts with
+  agreement off. They were chosen on these same recordings. This is a demonstration, not an independent benchmark.
 - "On the ball area" means found in the right place, not positioned exactly. Depth is the weakest direction
   (about ±10–15 cm in the big swing, with two cameras agreeing), and absolute distance hasn't been verified better than about 10 cm.
 - It finds the strongest movement. It doesn't yet identify or follow several objects.
@@ -77,13 +78,15 @@ The package is called `pixel2voxel` and the commands start with `p2v-`.
 
 ## Quick start
 
-You need [uv](https://docs.astral.sh/uv/) and at least two cameras (three is better).
+You need [uv](https://docs.astral.sh/uv/getting-started/installation/) and at least two cameras (three is better).
 
 ```bash
+git clone https://github.com/Zanz2/WebcamRadar.git
+cd WebcamRadar
 uv sync
 calibration/demo.sh                                      # try calibration on virtual cameras
 uv run p2v-calibrate list-cameras                        # find your cameras
-cp config/webcams.example.json config/my_cameras.json    # put them in here
+cp config/webcams.example.json config/my_cameras.json    # paste their rtsp_url lines in here
 ```
 
 Calibrate once with a printed board (about 20 minutes): [webcam guide](WEBCAM_TEST.md). Then:
@@ -100,6 +103,7 @@ uv run p2v-view                                            # terminal 2: 3D view
 | [calibration/README.md](calibration/README.md) | Calibration in depth |
 
 Tested on macOS with USB webcams. Network (RTSP) cameras, Linux and Windows are supported in code but untested.
+The calibration scripts need bash, so on Windows use WSL or Git Bash.
 Also included: `p2v-batch`, `p2v-cloud`, `p2v-drone` and `p2v-space`.
 
 ## License

@@ -190,7 +190,7 @@ def make_board(out_dir: str | Path, squares_x=7, squares_y=5, square_mm: float |
         x = rx0 + _px(10 * k, dpi)
         cv2.line(page, (x, ry), (x, ry - _px(4 if k % 5 else 7, dpi)), 0, max(1, int(2 * s)))
     cv2.putText(page, "100 mm", (rx1 + _px(3, dpi), ry), font, 0.8 * s, 0, max(1, int(2 * s)))
-    lines = [f"Print at 100% / actual size (no 'fit to page'). Measure the ruler and one square.",
+    lines = ["Print at 100% / actual size (no 'fit to page'). Measure the ruler and one square.",
              f"{squares_x}x{squares_y} squares, square {spec.square_mm:.2f} mm, marker {spec.marker_mm:.2f} mm, "
              f"{dictionary}. Mount flat and rigid."]
     for i, text in enumerate(lines):

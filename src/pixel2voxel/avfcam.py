@@ -1,7 +1,7 @@
 """Native macOS camera capture through AVFoundation (what Photo Booth uses), via PyObjC.
 
 Why: OpenCV's own AVFoundation backend delivers zero frames from some webcams
-(seen with a USB webcam that works fine in Photo Booth), and its device
+that work fine in other apps, and its device
 numbers shift whenever a camera or an iPhone (Continuity Camera) comes and goes.
 This backend opens cameras by NAME, so a config keeps pointing at the same
 physical camera.
@@ -162,7 +162,7 @@ class AVFCapture:
         out.setSampleBufferDelegate_queue_(self._sink, self._queue)
         # One configuration transaction. The session's default preset would otherwise
         # reset the camera to its own favourite format when it starts, silently
-        # ignoring the requested size (seen on all three test cameras).
+        # ignoring the requested size.
         session.beginConfiguration()
         session.addInput_(inp)
         session.addOutput_(out)

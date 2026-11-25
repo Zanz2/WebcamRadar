@@ -20,7 +20,7 @@ from . import apply as apply_mod
 from . import check as check_mod
 from . import extrinsics, intrinsics
 from .board import BoardDetector, make_board
-from .model import Lens, matrix_from_euler, pose_pipeline_to_cv, euler_from_matrix
+from .model import Lens, pose_pipeline_to_cv, euler_from_matrix
 from .synth import random_calibration_poses, render_board_view
 
 W, H = 1280, 720

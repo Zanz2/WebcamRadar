@@ -29,7 +29,11 @@ def apply(config_in: str | Path, results_dir: str | Path, config_out: str | Path
             cam["yaw"], cam["pitch"], cam["roll"] = pose["yaw"], pose["pitch"], pose["roll"]
             done.append(f"pose ({pose['method']}, pos {[round(v, 3) for v in pose['camera_position']]}, "
                         f"rms {pose['rms_px']} px)")
-        log.append(f"camera {n}: " + (", ".join(done) if done else "no results found (unchanged)"))
+        missing = [name for name, f in (("lens", lens_f), ("placement", pose_f)) if not f.exists()]
+        line = f"camera {n}: " + (", ".join(done) if done else "no results found (unchanged)")
+        if missing:
+            line += f"\n  WARNING: camera {n} has no {' or '.join(missing)} result: calibrate it or delete it from the config"
+        log.append(line)
     grid = data.get("grid") if isinstance(data, dict) else None
     if isinstance(grid, dict) and "center" in grid:
         size = grid.get("size", 500)
