@@ -12,10 +12,10 @@ No actual radar, no depth sensor, no AI model. Just geometry.
 ![Tests](https://img.shields.io/badge/tests-52-2ea44f)
 ![License](https://img.shields.io/badge/license-Apache%202.0%20%2B%20upstream%20terms-blue)
 
-<img src="docs/images/demo.gif" alt="Left: cropped views from three webcams, with the moving pixels in red. Right: the 3D reconstruction locating that motion about 3 m away" width="760">
+<img src="docs/images/demo.gif" alt="Left: cropped views from three webcams, with the moving pixels in red. Right: the 3D reconstruction locating that motion" width="760">
 
 *Left: what three USB webcams see (one is from about 2007), with the moving pixels in red. The 1.5 cm balls swing only slightly,
-in front of crumpled foil. Right: where the software says they are in 3D, about 3 m away. Replayed from a recording.*
+in front of crumpled foil. Right: where the software says they are in 3D. Replayed from a recording.*
 
 </div>
 
@@ -28,7 +28,8 @@ Webcam Radar suits objects that are too small or too far away to recognize, but 
 - **Measuring motion**, such as position, distance and swing rhythm
 - **Experimenting with multi-camera geometry** using cameras you already own
 
-The longer-term goal is tracking small drones outdoors. So far it has been tested indoors, at up to about 3 m.
+The longer-term goal is tracking small drones outdoors. So far, testing has been limited to
+cluttered indoor scenes, with partial occlusion and reflective backgrounds.
 
 ## How it works
 
@@ -41,7 +42,7 @@ The longer-term goal is tracking small drones outdoors. So far it has been teste
 
 ## Does it work?
 
-One indoor test: a Newton's cradle about 3 m away, with balls only 4–6 pixels wide. The score is how often the
+A Newton's cradle test, with balls only 4–6 pixels wide. The score is how often the
 brightest voxel landed on the cradle's ball area in all three cameras:
 
 | | Nothing moving | Big swing | Small swing (about 2 cm) |

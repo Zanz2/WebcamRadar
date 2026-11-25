@@ -111,7 +111,7 @@ Viewer controls: drag to orbit, scroll to zoom, `+`/`-` to lower or raise the br
 ### Small or far targets
 
 By default every camera's rays are summed, so one camera's streak can outshine the real target. In one test
-(three webcams, 1.5 cm balls about 3 m away) these settings found the small swing when the plain defaults didn't:
+(three webcams, 1.5 cm balls) these settings found the small swing when the plain defaults didn't:
 
 | Setting | Value | Why |
 |---|---|---|
@@ -120,7 +120,7 @@ By default every camera's rays are summed, so one camera's streak can outshine t
 | `decay_rate` | 0.001 | old motion fades fast, so the result follows the target |
 | `voxel_size` | 0.02 | about the ray miss *at the target's distance*; with smaller voxels the rays don't meet |
 
-They were tuned on that one indoor test, so treat them as a starting point. Depth is the least certain direction:
+They were tuned on that one test, so treat them as a starting point. Depth is the least certain direction:
 spacing the cameras further apart helps most. `noise_sigma` (a per-pixel noise threshold) is experimental.
 
 ## 4. Look at a saved grid
