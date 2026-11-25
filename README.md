@@ -85,7 +85,7 @@ git clone https://github.com/Zanz2/WebcamRadar.git
 cd WebcamRadar
 uv sync
 calibration/demo.sh                                      # try calibration on virtual cameras
-uv run p2v-calibrate list-cameras                        # find your cameras
+uv run p2v-calibrate list-cameras --size 1280x720        # find your cameras
 cp config/webcams.example.json config/my_cameras.json    # paste their rtsp_url lines in here
 ```
 
