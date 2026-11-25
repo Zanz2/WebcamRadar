@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 330" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">
+<rect width="980" height="330" rx="14" fill="#0b1017"/>
+<g fill="none" stroke="#1d2c42"><path d="M520 60h280v210H520zM520 95h280M520 130h280M520 165h280M520 200h280M520 235h280M555 60v210M590 60v210M625 60v210M660 60v210M695 60v210M730 60v210M765 60v210"/></g>
+<g stroke-width="2" opacity=".85"><path d="M156 60L800 195.4" stroke="#5bd1ff"/><path d="M156 165L800 138.1" stroke="#7be38b"/><path d="M156 270L800 80.6" stroke="#ffb454"/></g>
+<rect x="555" y="130" width="35" height="35" fill="#ff8a3c" opacity=".9"/><circle cx="572.5" cy="147.5" r="26" fill="none" stroke="#fff" stroke-width="2"/>
+<g fill="#111925" stroke-width="2"><path d="M96 42h44v36H96zM140 52l16-8v32l-16-8z" stroke="#5bd1ff"/><path d="M96 147h44v36H96zM140 157l16-8v32l-16-8z" stroke="#7be38b"/><path d="M96 252h44v36H96zM140 262l16-8v32l-16-8z" stroke="#ffb454"/></g>
+<g fill="#dbe4ee" font-size="15"><text x="26" y="65">Cam 1</text><text x="26" y="170">Cam 2</text><text x="26" y="275">Cam 3</text></g>
+<g fill="#dbe4ee" font-size="16" font-weight="600"><text x="200" y="40">1. Changed pixels become rays</text><text x="520" y="40">2. Rays fill a shared 3D voxel grid</text></g>
+<text x="820" y="150" fill="#fff" font-size="16" font-weight="600">3. Where</text><text x="820" y="172" fill="#fff" font-size="16" font-weight="600">they cross,</text><text x="820" y="194" fill="#fff" font-size="16" font-weight="600">something moves</text>
+<text x="235" y="312" fill="#8fa3ba" font-size="14">Calibration gives every pixel an exact direction, so rays from different cameras really meet.</text>
+</svg>

@@ -1,0 +1,13 @@
+pixel2voxel
+Copyright 2026 Zanz2 (zagarzan4@gmail.com)
+
+The additions and changes made in this repository are licensed under the Apache License, Version 2.0 (see LICENSE).
+
+This is a modified version of Pixel To Voxel Projector, Copyright [2025] [ConsistentlyInconsistent].
+The parts that come from that project remain under its own license, included unchanged in LICENSE-UPSTREAM:
+the Apache License 2.0 with an additional use restriction for defense entities. Because most of this
+repository is derived from that project, that restriction also applies to using it as a whole.
+
+Changes: the C++ and Python tools were rewritten in Python (numpy, numba, PyVista); rays entering the grid through
+a positive face are no longer dropped; drone velocity is computed; grid publishing is rate-limited; and camera
+calibration, lens undistortion, macOS capture, video replay, camera agreement and a noise filter were added.

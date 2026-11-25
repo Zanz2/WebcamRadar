@@ -1,0 +1,20 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+# outputs
+*.bin
+screenshots/
+# real camera configs usually hold credentials; only the example is tracked
+config/*.json
+!config/camera_config.example.json
+# calibration output: photos of your space
+calibration/work/
+calibration/demo/
+calibration/landmarks.csv
+!config/webcams.example.json
+.DS_Store
+config/*.bak*
+calibration/settings.local.sh
+# local, setup-specific demo (not part of the repo)
+tools/cradle_demo/

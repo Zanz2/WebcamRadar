@@ -1,0 +1,18 @@
+{
+  "grid": {
+    "size": [60, 60, 40],
+    "voxel_size": 0.01,
+    "center": [0.15, 0.10, 0.20],
+    "decay_rate": 0.3,
+    "motion_threshold": 25.0,
+    "distance_attenuation": 0.0,
+    "show_debug": true,
+    "save_interval_seconds": 30,
+    "publish_interval_seconds": 0.2
+  },
+  "cameras": [
+    {"camera_index": 0, "rtsp_url": "device:0@1280x720", "camera_position": [0, 0, 0], "yaw": 0, "pitch": 0, "roll": 90, "fov_degrees": 70},
+    {"camera_index": 1, "rtsp_url": "device:1@1280x720", "camera_position": [0, 0, 0], "yaw": 0, "pitch": 0, "roll": 90, "fov_degrees": 70},
+    {"camera_index": 2, "rtsp_url": "device:2@1280x720", "camera_position": [0, 0, 0], "yaw": 0, "pitch": 0, "roll": 90, "fov_degrees": 70}
+  ]
+}

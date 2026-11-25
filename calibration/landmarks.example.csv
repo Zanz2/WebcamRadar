@@ -1,0 +1,7 @@
+name,x,y,z
+floor_corner_A,0.000,0.000,0.000
+floor_corner_B,4.200,0.000,0.000
+floor_corner_C,4.200,3.600,0.000
+door_top_left,1.100,0.000,2.050
+window_bottom_right,3.900,3.600,0.900
+shelf_corner,0.000,2.400,1.600

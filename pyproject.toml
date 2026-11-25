@@ -1,0 +1,45 @@
+[project]
+name = "pixel2voxel"
+version = "0.1.0"
+description = "Multi-camera motion -> 3D voxel reconstruction"
+readme = "README.md"
+license = "Apache-2.0 AND LicenseRef-Upstream-Apache-2.0-with-defense-restriction"
+license-files = ["LICENSE", "LICENSE-UPSTREAM", "NOTICE"]
+requires-python = ">=3.11"
+dependencies = [
+    # Full (non-headless) OpenCV: the debug windows use cv2.imshow.
+    # The wheel bundles FFmpeg, so RTSP works without any system libraries.
+    "opencv-python>=4.10",
+    "numpy>=1.26",
+    "numba>=0.60",
+    "pyzmq>=26",
+    "pyvista>=0.44",
+    # Native macOS camera capture (camera:<name> URLs); OpenCV's own backend fails on some webcams.
+    "pyobjc-framework-AVFoundation>=10; sys_platform == 'darwin'",
+    "pyobjc-framework-CoreMedia>=10; sys_platform == 'darwin'",
+    "pyobjc-framework-Quartz>=10; sys_platform == 'darwin'",
+    "pyobjc-framework-libdispatch>=10; sys_platform == 'darwin'",
+]
+
+[project.optional-dependencies]
+# Only needed by p2v-space (the FITS / astronomy tool).
+space = ["astropy>=6", "matplotlib>=3.8"]
+
+[project.scripts]
+p2v-rtsp = "pixel2voxel.rtsp:main"
+p2v-batch = "pixel2voxel.batch:main"
+p2v-view = "pixel2voxel.viewer:main"
+p2v-cloud = "pixel2voxel.cloud:main"
+p2v-space = "pixel2voxel.space:main"
+p2v-drone = "pixel2voxel.drone.app:main"
+p2v-calibrate = "pixel2voxel.calib.cli:main"
+
+[dependency-groups]
+dev = ["pytest>=8"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
