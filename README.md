@@ -12,9 +12,10 @@ No actual radar, no depth sensor, no AI model. Just geometry.
 ![Tests](https://img.shields.io/badge/tests-52-2ea44f)
 ![License](https://img.shields.io/badge/license-Apache%202.0%20%2B%20upstream%20terms-blue)
 
-<img src="docs/images/demo.gif" alt="Replay: three webcams locate a swinging Newton's cradle about 3 m away" width="720">
+<img src="docs/images/demo.gif" alt="Left: cropped views from three webcams, with the moving pixels in red. Right: the 3D reconstruction locating that motion about 3 m away" width="760">
 
-*Three USB webcams, one from about 2007, locating 1.5 cm balls about 3 m away. Replayed from a recording.*
+*Left: what three USB webcams see (one is from about 2007), with the moving pixels in red. The 1.5 cm balls swing only slightly,
+in front of crumpled foil. Right: where the software says they are in 3D, about 3 m away. Replayed from a recording.*
 
 </div>
 
